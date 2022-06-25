@@ -1,38 +1,2053 @@
-.App {
+/* resets  */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+span,
+button,
+select,
+label {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+button {
+  border: none
+}
+
+/* header  */
+header {
+  position: relative;
+  background-image: url('../src/bg-img/ship2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1575px;
+}
+
+/* navbar  */
+.nav-container {
+  padding: 0 80px;
+  background-image: linear-gradient(to left top, rgba(26, 66, 87, 0), rgba(11, 29, 38, 0) 100%);
+  transition: all 0.5s;
+}
+
+.nav-container.scroll-active {
+  background-image: linear-gradient(to left top, rgba(26, 66, 87, 0), rgba(11, 29, 38, 1) 100%);
+  transition: all 0.5s;
+}
+
+.navbar {
+  padding: 35px 0 !important;
+}
+
+.navbar li {
+  padding: 0 37px !important;
+}
+
+.navbar li a {
+  padding: 0 !important;
+  padding-bottom: 16px !important;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px !important;
+  color: #FFF !important;
+}
+
+.navbar li.active a {
+  border-bottom: solid 3px rgba(239, 182, 33, 1);
+}
+
+.navbar li button#contact-us {
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 13px;
+  background-color: #EFB621;
+  color: #FFF
+}
+
+/* toggle  */
+.navbar-toggler {
+  background: #FFF !important;
+  border: none;
+  padding: 10px 6px !important;
+  outline: none !important;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: 1px;
+  background: #000;
+  border: solid 1px #000;
+}
+
+.navbar-toggler span+span {
+  width: 18px;
+  margin: 4px 0 0 4px;
+  width: 22px;
+}
+
+.navbar-toggler span+span+span {
+  width: 10px;
+  margin-left: 4px;
+}
+
+/* social media  */
+#sm {
+  color: #FFF;
+  position: fixed;
+  top: 297px;
+  left: 0px;
+  font-weight: 700;
+  font-size: 18px;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+
+#sm i {
+  margin-left: 30px;
+  color: #FFF;
+}
+
+/* header-text  */
+.header-text {
+  padding-top: 230px;
+  width: 950px;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.header-text span {
+  display: inline-block;
+  width: 72px;
+  border: solid 1px #FBD784;
+  margin-right: 32px
+}
+
+.header-text h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #FBD784;
+}
+
+.header-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 88px;
+  font-weight: 400;
+  text-align: right;
+  color: #FFF
+}
+
+/* about us  */
+.button-overlay {
+  position: absolute;
+  bottom: -430px;
+  padding: 10px;
+  background-image: linear-gradient(rgba(11, 29, 38, 0) 2%, rgba(11, 29, 38, 1) 24%);
+  width: 100%;
+}
+
+.button-overlay::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  margin: 0 !important;
+  background-color: rgba(11, 29, 38, 1);
+  border-bottom-left-radius: 80% 400px;
+  border-bottom-right-radius: 80% 400px;
+}
+
+.about-us {
+  padding: 0 220px;
+  position: relative
+}
+
+.about-us span {
+  display: inline-block;
+  width: 72px;
+  border: solid 1px #FBD784;
+  margin-right: 24px;
+}
+
+.about-us h4 {
+  color: #FBD784;
+  font-size: 18px;
+  font-weight: 800
+}
+
+.about-us h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 27px;
+}
+
+.about-us p {
+  line-height: 32px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.statement {
+  margin-top: 700px;
+  position: relative;
+  padding-top: 100px;
+}
+
+.statement::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background-color: #FFF;
+  border-bottom-left-radius: 80% 400px;
+  border-bottom-right-radius: 80% 400px;
+}
+
+.statement .section {
+  position: relative;
+  border-radius: 15px;
+  padding: 40px;
+  background-color: #FFF;
+  box-shadow: 4px 5px 20px 3px rgba(53, 65, 71, 0.15);
+  width: 390px;
+  min-height: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.statement .section h1 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 95px;
+  color: rgba(53, 65, 71, 0.3);
+  font-family: 'Playfair Display', serif;
+  position: absolute;
+  top: 22px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.statement .section img {
+  margin-bottom: 28px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.statement .section h3 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.statement .section p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.statement .section li {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer {
+  background: linear-gradient(rgba(11, 29, 38, 0.7), rgba(11, 29, 38, 0.7)), url('../src/bg-img/footer.png');
+  background-size: cover;
+  background-color: rgba(11, 29, 38, 0.9);
+  padding: 300px 80px 100px 80px;
+  color: red
+}
+
+footer h5 {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 24px;
+  max-width: 298px
+}
+
+footer h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(251, 215, 132, 1);
+  margin-bottom: 18px;
+}
+
+footer h3 span {
+  margin-right: 14px
+}
+
+footer a,
+footer h6 {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFF !important;
+  margin-bottom: 18px;
+  line-height: 32px;
+}
+
+footer a:hover {
+  color: #FFF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* services page  */
+.services {
+  padding: 200px 229px 0 229px;
+  background-color: #354147;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background-color: #354147;
+  border-bottom-left-radius: 80% 400px;
+  border-bottom-right-radius: 80% 400px;
+}
+
+.services h1 {
+  font-size: 64px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 82px !important;
+  color: #FFF
+}
+
+.services .oil {
+  margin-bottom: 220px;
+}
+
+.services .head {
+  margin-bottom: 36px;
+}
+
+.services .head span {
+  width: 72px;
+  border: solid 1px rgba(251, 215, 132, 1);
+  margin-right: 24px
+}
+
+.services .head h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: rgba(251, 215, 132, 1);
+  letter-spacing: 6px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.services .sub {
+  margin-bottom: 51px;
+}
+
+.services .sub span {
+  width: 35px;
+  border: solid 1px rgba(251, 215, 132, 0.3);
+  margin-right: 20px
+}
+
+.services .sub h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: rgba(251, 215, 132, 0.3);
+  letter-spacing: 6px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.services .oil li,
+.services .maritime li {
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.services .maritime .head {
+  margin-bottom: 51px;
+}
+
+.services .maritime .sub {
+  margin-bottom: 36px;
+}
+
+/* machines  */
+.machines {
+  padding-top: 300px;
+  background-color: #FFF;
+}
+
+.machines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background-color: #FFF;
+  border-bottom-left-radius: 80% 400px;
+  border-bottom-right-radius: 80% 400px;
+}
+
+.machines h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 65px;
+}
+
+.owl-carousel .owl-nav button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50% !important;
+  background-color: rgba(58, 61, 63, 1) !important;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+.owl-carousel .owl-nav button.owl-prev {
+  left: -80px;
+  top: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.owl-carousel .owl-nav button.owl-next {
+  right: -80px;
+  top: 40%
+}
+
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  color: #FFF;
+  font-size: 35px;
+}
+
+.owl-carousel .item {
+  width: 400px;
+  margin-right: 128px;
+  position: relative;
+}
+
+.owl-carousel .item .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(178.45deg, rgba(0, 0, 0, 0) 1.32%, #000000 92.9%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.owl-carousel .item .img-overlay>* {
+  transform: translateX(20px);
+  transition: transforn(0.25s)
+}
+
+.owl-carousel .item .img-overlay:hover {
+  opacity: 1
+}
+
+.owl-carousel .item .img-overlay p {
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  max-width: 310px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* enquiry page  */
+#enquiry header,
+#services header {
+  position: relative;
+  background-image: none;
+  height: unset
+}
+
+#enquiry .nav-container {
+  background-color: rgba(11, 29, 38, 1);
+}
+
+#enquiry #sm,
+#enquiry #sm i {
+  color: rgba(53, 65, 71, 1)
+}
+
+.enquiry {
+  background-color: #FFF;
+}
+
+.enquiry::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background-color: #FFF;
+  border-bottom-left-radius: 80% 400px;
+  border-bottom-right-radius: 80% 400px;
+}
+
+.enquiry .form {
+  width: 646px;
+  padding-top: 230px;
+  margin: 0 auto;
+}
+
+.enquiry .form span {
+  width: 72px;
+  margin-right: 14px;
+  border: solid 1px rgba(11, 29, 38, 1)
+}
+
+.enquiry .form h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: rgba(11, 29, 38, 0.4);
+  letter-spacing: 6px;
+  line-height: 21px;
+}
+
+.enquiry .form h1 {
+  font-size: 64px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  line-height: 85px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.enquiry .form label {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.enquiry .form input,
+.enquiry .form textarea {
+  padding: 17px 11px;
+  width: 284px;
+  background-color: rgba(53, 65, 71, 0.1);
+  border: solid 1px rgba(53, 65, 71, 0.1);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 4px;
+  margin-bottom: 26px;
+}
+
+.enquiry .form textarea {
+  width: 100%;
+  height: 109px
+}
+
+.PhoneInput {
+  width: 284px;
+}
+
+.PhoneInput input {
+  margin-bottom: 0 !important;
+}
+
+.PhoneInputCountry {
+  height: 60px;
+  width: 60px;
+  background-color: rgba(53, 65, 71, 0.1);
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.enquiry .form button {
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgba(53, 65, 71, 1);
+  margin: 0 auto
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, .5) !important;
+  z-index: 1031 !important;
+}
+
+#successMOdal {
+  position: absolute;
+  top: 5% !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 658px;
+  height: 400px;
+  background-color: #FFF !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  border: none !important;
+  box-shadow: 4px 5px 20px 3px rgba(53, 65, 71, 0.15);
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+#successMOdal i {
+  float: right;
+}
+
+#successMOdal img {
+  margin: 72px auto 22px;
+}
+
+#successMOdal h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+#successMOdal p {
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 499px;
+  margin: 0 auto;
+  margin-bottom: 52px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (min-width: 1400px) {}
+
+@media (min-width: 1120px) and (max-width: 1399px) {
+
+  /* about us  */
+  .about-us {
+    padding: 0 160px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .about-us h1 {
+    font-size: 44px;
+  }
+
+  /* statement  */
+  .statement .section {
+    width: 100%
+  }
+
+  /* services page  */
+  .services {
+    padding: 200px 125px 0 125px;
+  }
+
+  .services h1 {
+    font-size: 55px;
+    margin-bottom: 65px !important;
+  }
+
+  .services .oil li,
+  .services .maritime li {
+    font-size: 16px;
+  }
+
+  .services .oil {
+    margin-bottom: 80px;
+  }
+
+  /* machines  */
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -30px;
+    top: 40%;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    right: -30px;
+    top: 40%;
+  }
+
+  .owl-carousel .item {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .owl-carousel .owl-nav button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev span,
+  .owl-carousel .owl-nav button.owl-next span {
+    color: #FFF;
+    font-size: 25px;
+  }
+
+  .owl-carousel .item .img-overlay p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1119px) {
+
+  /* navbar  */
+  .nav-container {
+    padding: 0 70px
+  }
+
+  .navbar li a {
+    font-size: 16px;
+  }
+
+  /* header text  */
+  .header-text {
+    width: 645px;
+  }
+
+  .header-text h4 {
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    font-size: 65px;
+  }
+
+  /* about us  */
+  .button-overlay {
+    bottom: -290px;
+  }
+
+  .about-us {
+    padding: 0 160px;
+  }
+
+  .about-us h1 {
+    font-size: 44px;
+  }
+
+  .about-us p {
+    line-height: 26px;
+    font-size: 14px;
+  }
+
+  .button-overlay::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  /* statement  */
+  .statement {
+    margin-top: 350px
+  }
+
+  .statement::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .statement .section {
+    width: 100%;
+    padding: 20px
+  }
+
+  .statement .section h1 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .statement .section img {
+    margin-bottom: 20px;
+  }
+
+  /* services page  */
+  .services {
+    padding: 200px 125px 0 125px;
+  }
+
+  .services::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .services h1 {
+    font-size: 50px;
+    margin-bottom: 50px !important;
+  }
+
+  .services .head {
+    margin-bottom: 25px;
+  }
+
+  .services .oil li,
+  .services .maritime li {
+    font-size: 16px;
+  }
+
+  .services .oil {
+    margin-bottom: 80px;
+  }
+
+  /* machines  */
+  .machines {
+    padding-top: 135px;
+  }
+
+  .machines h1 {
+    font-size: 45px;
+  }
+
+  .machines::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -35px;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    right: -35px;
+  }
+
+  .owl-carousel .item {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .owl-carousel .owl-nav button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev span,
+  .owl-carousel .owl-nav button.owl-next span {
+    color: #FFF;
+    font-size: 25px;
+  }
+
+  .owl-carousel .item .img-overlay p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /* navbar  */
+  .nav-container {
+    padding: 0 70px
+  }
+
+  .navbar .logo {
+    width: 140px
+  }
+
+  .navbar-collapse {
+    margin-top: 20px;
+  }
+
+  .navbar li {
+    padding: 0 !important;
+  }
+
+  .navbar li a {
+    padding-bottom: 6px !important;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* header text  */
+  .header-text {
+    width: 590px;
+  }
+
+  .header-text span {
+    margin-right: 20px;
+  }
+
+  .header-text h4 {
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    font-size: 58px;
+  }
+
+  /* about us  */
+  .button-overlay {
+    bottom: -290px;
+  }
+
+  .about-us {
+    padding: 0 90px;
+  }
+
+  .about-us h1 {
+    font-size: 37px;
+    margin-bottom: 18px;
+  }
+
+  .about-us p {
+    line-height: 26px;
+    font-size: 14px;
+  }
+
+  .button-overlay::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  /* statement  */
+  .statement {
+    margin-top: 350px;
+  }
+
+  .statement::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .statement .section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .statement .section h1 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .statement .section img {
+    margin-bottom: 20px;
+  }
+
+  /* footer  */
+  footer {
+    padding: 200px 96px 100px 96px;
+  }
+
+  footer .logo {
+    width: 120px
+  }
+
+  footer h5 {
+    font-size: 14px;
+  }
+
+  footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  footer a,
+  footer h6 {
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 18px;
+  }
+
+  /* services page  */
+  .services {
+    padding: 200px 125px 0 125px;
+  }
+
+  .services::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .services h1 {
+    font-size: 40px;
+    margin-bottom: 35px !important;
+  }
+
+  .services .head {
+    margin-bottom: 25px;
+  }
+
+  .services .sub {
+    margin-bottom: 40px;
+  }
+
+  .services .maritime .head {
+    margin-bottom: 40px;
+  }
+
+  .services .oil li,
+  .services .maritime li {
+    font-size: 14px;
+  }
+
+  .services .oil {
+    margin-bottom: 80px;
+  }
+
+  /* machines  */
+  .machines {
+    padding-top: 135px;
+  }
+
+  .machines h1 {
+    font-size: 35px;
+  }
+
+  .machines::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -35px;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    right: -35px;
+  }
+
+  .owl-carousel .item {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .owl-carousel .owl-nav button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev span,
+  .owl-carousel .owl-nav button.owl-next span {
+    color: #FFF;
+    font-size: 25px;
+  }
+
+  .owl-carousel .item .img-overlay p {
+    font-size: 14px;
+  }
+
+  /* enquiry page  */
+  .enquiry::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .enquiry .form {
+    width: 580px;
+    padding-top: 180px;
+  }
+
+  .enquiry .form span {
+    width: 60px;
+    margin-right: 12px;
+  }
+
+  .enquiry .form h3 {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .enquiry .form h1 {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 50px;
+  }
+
+  .PhoneInputCountry {
+    height: 57px;
+  }
+
+  #successMOdal {
+    top: 10% !important;
+    width: 500px;
+  }
+
+  #successMOdal img {
+    margin: 50px auto 22px;
+  }
+
+  #successMOdal p {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+  /* navbar  */
+  .nav-container {
+    padding: 0 50px
+  }
+
+  .navbar {
+    padding: 25px 0 !important;
+  }
+
+  .navbar .logo {
+    width: 140px
+  }
+
+  .navbar-collapse {
+    margin-top: 20px;
+  }
+
+  .navbar li {
+    padding: 0 !important;
+  }
+
+  .navbar li a {
+    padding-bottom: 6px !important;
+    margin-bottom: 17px;
+    font-size: 16px;
+  }
+
+  /* social media  */
+  #sm {
+    left: -25px;
+    font-size: 16px;
+  }
+
+  /* header text  */
+  header {
+    height: 800px
+  }
+
+  .header-text {
+    width: 460px;
+  }
+
+  .header-text span {
+    width: 50px;
+    margin-right: 15px;
+  }
+
+  .header-text h4 {
+    font-size: 14px;
+  }
+
+  .header-text h1 {
+    font-size: 45px;
+  }
+
+  /* about us  */
+  .about-us span {
+    width: 55px;
+    margin-right: 15px;
+  }
+
+  .about-us h4 {
+    font-size: 14px;
+  }
+
+  .button-overlay {
+    bottom: -290px;
+  }
+
+  .about-us {
+    padding: 0 60px;
+  }
+
+  .about-us h1 {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  .about-us p {
+    line-height: 26px;
+    font-size: 14px;
+  }
+
+  .button-overlay::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  /* statement  */
+  .statement {
+    margin-top: 350px;
+  }
+
+  .statement::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .statement .section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .statement .section h1 {
+    font-size: 40px;
+    line-height: 35px;
+  }
+
+  .statement .section img {
+    margin-bottom: 15px;
+  }
+
+  /* footer  */
+  footer {
+    padding: 160px 70px 70px 70px;
+  }
+
+  footer .logo {
+    width: 120px
+  }
+
+  footer h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  footer h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  footer a,
+  footer h6 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 18px;
+  }
+
+  /* services page  */
+  .services {
+    padding: 130px 70px 0 70px;
+  }
+
+  .services::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .services h1 {
+    font-size: 35px;
+    margin-bottom: 30px !important;
+  }
+
+  .services .head {
+    margin-bottom: 15px;
+  }
+
+  .services .head span {
+    width: 60px;
+    margin-right: 15px;
+  }
+
+  .services .head h3 {
+    font-size: 14px;
+  }
+
+  .services .sub h3 {
+    font-size: 12px;
+  }
+
+  .services .sub {
+    margin-bottom: 30px;
+  }
+
+  .services .maritime .head {
+    margin-bottom: 25px;
+  }
+
+  .services .maritime .sub {
+    margin-bottom: 15px;
+  }
+
+  .services .oil li,
+  .services .maritime li {
+    font-size: 14px;
+  }
+
+  .services .oil {
+    margin-bottom: 80px;
+  }
+
+  /* machines  */
+  .machines {
+    padding-top: 135px;
+  }
+
+  .machines h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+
+  .machines::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -35px;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    right: -35px;
+  }
+
+  .owl-carousel .item {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .owl-carousel .owl-nav button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev span,
+  .owl-carousel .owl-nav button.owl-next span {
+    color: #FFF;
+    font-size: 25px;
+  }
+
+  .owl-carousel .item .img-overlay p {
+    font-size: 14px;
+  }
+
+  /* enquiry page  */
+  .enquiry::after {
+    height: 100px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .enquiry .form {
+    width: 440px;
+    padding-top: 160px;
+  }
+
+  .enquiry .form span {
+    width: 60px;
+    margin-right: 12px;
+  }
+
+  .enquiry .form h3 {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 5px;
+  }
+
+  .enquiry .form h1 {
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 35px;
+  }
+
+  .enquiry .form input {
+    width: 215px;
+    padding: 11px
+  }
+
+  .PhoneInput {
+    width: 215px;
+  }
+
+  .PhoneInputCountry {
+    height: 45px;
+  }
+
+  #successMOdal {
+    top: 10% !important;
+    width: 450px;
+  }
+
+  #successMOdal img {
+    margin: 40px auto 22px;
+  }
+
+  #successMOdal p {
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 386px) and (max-width: 575px) {
+
+  /* navbar  */
+  .nav-container {
+    padding: 0 30px
+  }
+
+  .navbar {
+    padding: 20px 0 !important;
+  }
+
+  .navbar .logo {
+    width: 120px
+  }
+
+  .navbar-collapse {
+    margin-top: 20px;
+  }
+
+  .navbar li {
+    padding: 0 !important;
+  }
+
+  .navbar li a {
+    padding-bottom: 6px !important;
+    margin-bottom: 17px;
+    font-size: 16px;
+  }
+
+  .navbar li button#contact-us {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  /* social media  */
+  #sm {
+    top: 260px;
+    left: -35px;
+    font-size: 16px;
+  }
+
+  /* header text  */
+  header {
+    height: 1100px
+  }
+
+  .header-text {
+    width: 280px;
+  }
+
+  .header-text span {
+    width: 35px;
+    margin-right: 10px;
+  }
+
+  .header-text h4 {
+    font-size: 10px;
+  }
+
+  .header-text h1 {
+    font-size: 26px;
+  }
+
+  /* about us  */
+  .about-us span {
+    width: 55px;
+    margin-right: 15px;
+  }
+
+  .about-us h4 {
+    font-size: 14px;
+  }
+
+  .button-overlay {
+    bottom: -290px;
+  }
+
+  .about-us {
+    padding: 0 50px;
+  }
+
+  .about-us h1 {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  .about-us p {
+    line-height: 26px;
+    font-size: 14px;
+    margin-bottom: 20px !important;
+  }
+
+  .button-overlay::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  /* statement  */
+  .statement {
+    margin-top: 280px;
+  }
+
+  .statement::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .statement .section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .statement .section h1 {
+    font-size: 40px;
+    line-height: 35px;
+  }
+
+  .statement .section img {
+    margin-bottom: 15px;
+  }
+
+  /* footer  */
+  footer {
+    padding: 90px 20px 30px 20px;
+  }
+
+  footer .logo {
+    width: 120px
+  }
+
+  footer h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  footer h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  footer a,
+  footer h6 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 18px;
+  }
+
+  /* services page  */
+  .services {
+    padding: 130px 70px 0 70px;
+  }
+
+  .services::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .services h1 {
+    font-size: 35px;
+    margin-bottom: 30px !important;
+  }
+
+  .services .head {
+    margin-bottom: 15px;
+  }
+
+  .services .head span {
+    width: 60px;
+    margin-right: 15px;
+  }
+
+  .services .head h3 {
+    font-size: 14px;
+  }
+
+  .services .sub h3 {
+    font-size: 12px;
+  }
+
+  .services .sub {
+    margin-bottom: 30px;
+  }
+
+  .services .maritime .head {
+    margin-bottom: 25px;
+  }
+
+  .services .maritime .sub {
+    margin-bottom: 15px;
+  }
+
+  .services .oil li,
+  .services .maritime li {
+    font-size: 14px;
+  }
+
+  .services .oil {
+    margin-bottom: 80px;
+  }
+
+  /* machines  */
+  .machines {
+    padding-top: 80px;
+  }
+
+  .machines h1 {
+    font-size: 27px;
+    margin-bottom: 40px;
+  }
+
+  .machines::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -15px;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    right: -15px;
+  }
+
+  .owl-carousel .item {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .owl-carousel .owl-nav button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev span,
+  .owl-carousel .owl-nav button.owl-next span {
+    color: #FFF;
+    font-size: 25px;
+  }
+
+  .owl-carousel .item .img-overlay p {
+    font-size: 14px;
+  }
+
+  /* enquiry page  */
+  .enquiry::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .enquiry .form {
+    width: 280px;
+    padding-top: 130px;
+  }
+
+  .enquiry .form span {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .enquiry .form h3 {
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0px;
+  }
+
+  .enquiry .form h1 {
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+
+  .enquiry .form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .enquiry .form input {
+    width: 100%;
+    padding: 11px
+  }
+
+  .PhoneInput {
+    width: 100%;
+    margin-bottom: 26px;
+  }
+
+  .PhoneInputCountry {
+    height: 45px;
+  }
+
+  #successMOdal {
+    width: 350px;
+    height: 350px;
+  }
+
+  #successMOdal img {
+    margin: 30px auto 22px;
+  }
+}
+
+@media (max-width: 385px) {
+
+  /* navbar  */
+  .nav-container {
+    padding: 0 30px
+  }
+
+  .navbar {
+    padding: 10px 0 !important;
+  }
+
+  .navbar .logo {
+    width: 120px
+  }
+
+  .navbar-collapse {
+    margin-top: 20px;
+  }
+
+  .navbar li {
+    padding: 0 !important;
+  }
+
+  .navbar li a {
+    padding-bottom: 6px !important;
+    margin-bottom: 17px;
+    font-size: 16px;
+  }
+
+  .navbar li button#contact-us {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  /* social media  */
+  #sm {
+    top: 260px;
+    left: -35px;
+    font-size: 16px;
+  }
+
+  /* header text  */
+  header {
+    height: 1000px
+  }
+
+  .header-text {
+    width: 280px;
+  }
+
+  .header-text span {
+    width: 35px;
+    margin-right: 10px;
+  }
+
+  .header-text h4 {
+    font-size: 10px;
+  }
+
+  .header-text h1 {
+    font-size: 26px;
+  }
+
+  /* about us  */
+  .about-us span {
+    width: 55px;
+    margin-right: 15px;
+  }
+
+  .about-us h4 {
+    font-size: 14px;
+  }
+
+  .button-overlay {
+    bottom: -290px;
+  }
+
+  .about-us {
+    padding: 0 45px;
+  }
+
+  .about-us h1 {
+    font-size: 25px;
+    margin-bottom: 18px;
+  }
+
+  .about-us p {
+    line-height: 26px;
+    font-size: 12px;
+    margin-bottom: 20px !important;
+  }
+
+  .button-overlay::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  /* statement  */
+  .statement {
+    margin-top: 275px;
+  }
+
+  .statement::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .statement .section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .statement .section h1 {
+    font-size: 40px;
+    line-height: 35px;
+  }
+
+  .statement .section img {
+    margin-bottom: 15px;
+  }
+
+  /* footer  */
+  footer {
+    padding: 90px 20px 50px 20px;
+  }
+
+  footer .logo {
+    width: 120px
+  }
+
+  footer h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  footer h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  footer a,
+  footer h6 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 18px;
+  }
+
+  /* services page  */
+  .services {
+    padding: 130px 70px 0 70px;
+  }
+
+  .services::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .services h1 {
+    font-size: 25px;
+    margin-bottom: 30px !important;
+  }
+
+  .services .head {
+    margin-bottom: 15px;
+  }
+
+  .services .head span {
+    width: 60px;
+    margin-right: 15px;
+  }
+
+  .services .head h3 {
+    font-size: 14px;
+  }
+
+  .services .sub h3 {
+    font-size: 12px;
+  }
+
+  .services .sub {
+    margin-bottom: 30px;
+  }
+
+  .services .maritime .head {
+    margin-bottom: 25px;
+  }
+
+  .services .maritime .sub {
+    margin-bottom: 15px;
+  }
+
+  .services .oil li,
+  .services .maritime li {
+    font-size: 14px;
+  }
+
+  .services .oil {
+    margin-bottom: 80px;
+  }
+
+  /* machines  */
+  .machines {
+    padding-top: 80px;
+  }
+
+  .machines h1 {
+    font-size: 27px;
+    margin-bottom: 40px;
+  }
+
+  .machines::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -15px;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    right: -15px;
+  }
+
+  .owl-carousel .item {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .owl-carousel .owl-nav button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .owl-carousel .owl-nav button.owl-prev span,
+  .owl-carousel .owl-nav button.owl-next span {
+    color: #FFF;
+    font-size: 25px;
+  }
+
+  .owl-carousel .item .img-overlay p {
+    font-size: 14px;
+  }
+
+  /* enquiry page  */
+  .enquiry::after {
+    height: 50px;
+    border-bottom-left-radius: 80% 500px;
+    border-bottom-right-radius: 80% 500px;
+  }
+
+  .enquiry .form {
+    width: 250px;
+    padding-top: 110px;
+  }
+
+  .enquiry .form span {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .enquiry .form h3 {
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0px;
+  }
+
+  .enquiry .form h1 {
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+
+  .enquiry .form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .enquiry .form input {
+    width: 100%;
+    padding: 11px
+  }
+
+  .PhoneInput {
+    width: 100%;
+    margin-bottom: 26px;
+  }
+
+  .PhoneInputCountry {
+    height: 45px;
+  }
+
+  #successMOdal {
+    width: 330px;
+    height: 400px;
+  }
+
+  #successMOdal img {
+    margin: 30px auto 22px;
   }
 }
