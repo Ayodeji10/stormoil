@@ -4,6 +4,7 @@ import Nav from '../components/nav'
 import SocialMedia from '../components/socialMedia'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import axios from "axios";
 // import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ClipLoader";
 import Modal from 'react-modal'
@@ -25,16 +26,20 @@ function Enquiry() {
     const sendMail = () => {
         setError(null)
         setLoading(true)
-        // if (name === "" || email === "" || subject === "" || number === "" || message === "") {
-        //     setError("Please fill all inut spaces")
-        // } else {
-        //     axios.post(`${API.API_ROOT}/users/signin`, { email: loginEmail, password: loginPassword })
-        //         .then(response => {
-        //             console.log(response)
-        //         }).catch(error => {
-        //             console.log(error.response.status)
-        //         })
-        // }
+        if (name === "" || email === "" || subject === "" || number === "" || message === "") {
+            setError("Please fill all inut spaces")
+            setLoading(false)
+        } else {
+            axios.post("https://olf.online/storm/api/contact", { name, email, phonenumber: number, subject, message })
+                .then(response => {
+                    console.log(response)
+                    setLoading(false)
+                    setSuccessModal(true)
+                }).catch(error => {
+                    console.log(error.response.status)
+                    setLoading(false)
+                })
+        }
     }
 
     return (
@@ -77,6 +82,7 @@ function Enquiry() {
                     </div>
                     <label htmlFor="text">How can we help you?</label>
                     <textarea name="text" id="text" cols={30} rows={10} placeholder="Type Here" value={message} onChange={(e) => setMessage(e.target.value)} />
+                    <p id='error'>{error}</p>
                     {!loading ?
                         <button onClick={sendMail}><img src="img/send.png" alt="" /></button>
                         :

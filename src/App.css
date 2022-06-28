@@ -667,6 +667,11 @@ footer a:hover {
   margin-bottom: 52px;
 }
 
+#error {
+  color: red;
+  text-align: center
+}
+
 
 
 
